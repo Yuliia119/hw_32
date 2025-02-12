@@ -25,13 +25,13 @@ public class Main {
                 break; // сортирует по возрастанию цены
             case 2:
                 produkts.sort(Comparator.comparingInt(Produkt::getPrice).reversed());
-                break; //
+                break; // сортирует по убыванию цены
             case 3:
                 produkts.sort(Comparator.comparingDouble(Produkt::getRating).reversed());
-                break;
+                break; // сортирует по рейтингу
             case 4:
                 produkts.sort(Comparator.comparingInt(Produkt::getStock).reversed());
-                break;
+                break; // сортирует по количеству на складе
             default:
                 System.out.println("Неверный выбор");
         }
