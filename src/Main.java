@@ -17,6 +17,7 @@ public class Main {
         System.out.println("2.Цена по убыванию");
         System.out.println("3.Рейтинг");
         System.out.println("4.Количество на складе");
+        System.out.println("5.По имени");
 
         int select = scanner.nextInt();
         switch (select) {
@@ -31,7 +32,9 @@ public class Main {
                 break; // сортирует по рейтингу
             case 4:
                 produkts.sort(Comparator.comparingInt(Produkt::getStock).reversed());
-                break; // сортирует по количеству на складе
+                break;   // сортирует по количеству на складе
+            case 5: produkts.sort(Comparator.comparing(Produkt::getName));
+                break;  // сортирует по имени
             default:
                 System.out.println("Неверный выбор");
         }
